@@ -15,7 +15,8 @@ namespace TicTacToe
                 computerLetter = 'O';
             else
                 computerLetter = 'X';
-            Console.WriteLine(userLetter +" " + computerLetter);
+            game.MakeMove(userLetter);
+            game.ShowBoard();
         }
     }
 }
