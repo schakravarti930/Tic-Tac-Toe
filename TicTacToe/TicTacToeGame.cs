@@ -50,7 +50,7 @@ namespace TicTacToe
             {
                 Console.WriteLine($"Enter the Index You want to Place {userLetter}");
                 index = Convert.ToInt32(Console.ReadLine());
-                if (index > this.Board.Length || this.Board[index] != ' ')
+                if (index > this.Board.Length || index < 1 || this.Board[index] != ' ')
                 {
                     Console.WriteLine("Enter Again. Cell Not Free or Out of Index");
                 }
