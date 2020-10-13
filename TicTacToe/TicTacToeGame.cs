@@ -54,7 +54,7 @@ namespace TicTacToe
                 {
                     Console.WriteLine("Enter Again. Cell Not Free or Out of Index");
                 }
-            } while (index > this.Board.Length || this.Board[index] != ' ');
+            } while (index > this.Board.Length || index < 1 || this.Board[index] != ' ');
             this.Board[index] = userLetter;
         }
     }
