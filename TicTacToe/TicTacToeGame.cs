@@ -31,5 +31,17 @@ namespace TicTacToe
                 }
             }
         }
+        public void ShowBoard()
+        {
+            Console.WriteLine("     |     |      ");
+            Console.WriteLine("  {0}  |  {1}  |  {2}", Board[1], Board[2], Board[3]);
+            Console.WriteLine("_____|_____|_____ ");
+            Console.WriteLine("     |     |      ");
+            Console.WriteLine("  {0}  |  {1}  |  {2}", Board[4], Board[5], Board[6]);
+            Console.WriteLine("_____|_____|_____ ");
+            Console.WriteLine("     |     |      ");
+            Console.WriteLine("  {0}  |  {1}  |  {2}", Board[7], Board[8], Board[9]);
+            Console.WriteLine("     |     |      ");
+        }
     }
 }
