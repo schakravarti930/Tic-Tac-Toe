@@ -57,5 +57,14 @@ namespace TicTacToe
             } while (index > this.Board.Length || index < 1 || this.Board[index] != ' ');
             this.Board[index] = userLetter;
         }
+        public string Toss()
+        {
+            Random random = new Random();
+            int coinToss = random.Next(0, 2);
+            if (coinToss == 0)
+                return "USER";
+            else
+                return "COMPUTER";
+        }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace TicTacToe
 {
     class Program
@@ -15,8 +14,19 @@ namespace TicTacToe
                 computerLetter = 'O';
             else
                 computerLetter = 'X';
-            game.MakeMove(userLetter);
-            game.ShowBoard();
+            string FirstMovePlayer = game.Toss();
+            Console.WriteLine($"{FirstMovePlayer} moves First");
+            if (FirstMovePlayer.Equals("USER"))
+            {
+                game.MakeMove(userLetter);
+                game.ShowBoard();
+            }
+            else
+            {
+                game.MakeMove(computerLetter);
+                game.ShowBoard();
+            }
+           
         }
     }
 }
