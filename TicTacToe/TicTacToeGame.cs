@@ -10,9 +10,25 @@ namespace TicTacToe
         public void CreateBoard()
         {
             Board = new char[10];
-            for(int i = 0; i < Board.Length; i++)
+            for(int i = 1; i < Board.Length; i++)
             {
-                Board[i] = 'a';
+                Board[i] = ' ';
+            }
+        }
+        public char ChooseLetter()
+        {
+            while (true)
+            {
+                Console.WriteLine("Choose a Letter among 'X' or 'O' ");
+                char userLetter = Convert.ToChar(Console.ReadLine());
+                if (userLetter == 'X' || userLetter == 'O' || userLetter == 'x' || userLetter == 'o')
+                {
+                    return userLetter;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input. Try Again.");
+                }
             }
         }
     }

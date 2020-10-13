@@ -8,7 +8,13 @@ namespace TicTacToe
         {
             TicTacToeGame game = new TicTacToeGame();
             game.CreateBoard();
-            Console.WriteLine(game.Board);
+            char userLetter = game.ChooseLetter();
+            char computerLetter;
+            if (userLetter == 'X' || userLetter == 'x')
+                computerLetter = 'O';
+            else
+                computerLetter = 'X';
+            Console.WriteLine(userLetter +" " + computerLetter);
         }
     }
 }
